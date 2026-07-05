@@ -15,7 +15,7 @@ pipeline {
         }
         stage('APPROVAL') {
             steps {
-                input message 'Approval is required. shall we proceed??', ok:"Approve"
+                input message:'Approval is required. shall we proceed??', ok:"Approve"
             }
         }
         stage('APPLAY') {
