@@ -1,0 +1,62 @@
+
+CI/CD : Continuous Integration / Continuous Delivery/Deployment
+---> CI/CD is a process that automates code interation, testing and deployment to deliver software faster and reliably.
+
+
+Jenkins:
+---> Jenkins is an open source automation tool used to create CI/CD pipeline for building, testing and deploying application.
+
+how to setup jenkins:
+1. launch instance
+2. install java version 21
+3. install jenkins
+4. open port 8080
+5. access instance public_ip:8080
+6. unlock jenkins
+7. create job
+
+/var/lib/jenkins/jobs = all job's configuration details
+/var/lib/jenkins/workspace = all files need for jobs store here
+
+developer ---> push ---> github ---> pull job
+                                ---> build job
+                                ---> test job
+                                ---> deploy job
+
+use post build action for build automation.
+
+18 microservices ----> 32 jobs
+
+**Master-slave architecture**
+--> master-slave architecture or controller-agent is used to distribute the workload of jenkins
+1. master (controller)
+--> the jenkins master is the main jenkins server.
+--> it manage jenkins configuration
+--> create and schedule jobs
+--> store plugins and job details
+--> decide where a job should run
+
+2. slave (worker/build-agent)
+--> a slave/agent is another machine connected to jenkins that actually runs the jobs.
+--> it execute build steps
+--> it run test
+--> deploy code
+
+
+pipeline plugin 
+PULL --- > BUILD ---> TEST ---> DEPLOY
+
+pipeline plugin ---> Jenkinsfile
+-two type of jenkins pipeline:
+1. scripted pipeline
+2. declarative pipeline
+
+scripted pipeline                               declarative pipeline
+  older style                                    latest / recommended approch
+wriiten using groovy programmin                has fixed, strucured syntax
+language.
+complex                                                                                                                
+syntax start with node keyword              syntax start with pipeline keyword
+.groovy                                              .jdp
+
+pipeline stage view plugin  and pipeline plugin

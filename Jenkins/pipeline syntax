@@ -1,0 +1,22 @@
+
+main.java
+--> validate
+--> javac main.java -----> .class
+--> java test 
+--> java package
+
+1. shell scripting
+2. jenkins 
+3. build tool
+eg: maven, gradle, another
+
+.jpg
+.java
+.java for testing
+
+
+*maven lifecycle
+1. default: 8 phase
+2. clean
+3. site
+

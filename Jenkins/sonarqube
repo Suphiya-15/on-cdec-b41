@@ -1,0 +1,11 @@
+
+string password= "admin123"
+system.out.println(passsword)
+
+if a>10
+100 lines
+
+sonarQube:
+
+string s = null
+println(s.lenth)

@@ -1,0 +1,21 @@
+
+Modules:
+---> Terraform module is like a resuable template or a ready made package of terraform code.
+
+terraform.tfstate:
+--> it is very importatnt file because it stores the current state of your infrastructure.
+
+dev = dev-instance = t3.micro --> 20 resources --> 50 lines  
+test = test-instance = t2.micro
+prod = prod-instance = t3.medium
+
+
+backend remote location : AWS s3
+
+dev-variable.tf : t3.micro
+test-variable.tf : t2.micro
+prod-variable.tf : t3.medium
+
+main.tf  
+
+terraform apply -var-file=vars/dev.tfvar

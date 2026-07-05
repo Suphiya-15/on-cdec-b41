@@ -1,0 +1,113 @@
+
+
+
+1. Create VPC
+2. VPC Peering
+3. subnet 8
+4. NAT gateway
+5. route table
+6. NACL/SG
+7. ELB
+8. AS
+9. EBS snapshot
+10. Instances
+
+
+Time???  1 day , in worst case 1 week
+
+1 week for Dev
+4 days for testing
+4 days for pre-prod
+
+console:
+1. time consuming
+2. Human error
+
+
+shell scripting: 
+--AWS CLI
+--learn It
+--variable management
+--security
+--no infra management
+
+
+Iac: Infrastructure as Code ----> AWS ----> Cloudformation
+
+                                            Terraform
+                                        
+Cloudformation vs Terraform
+
+*Terraform Language
+-->syntax:
+       key=values
+       -no indentation. use {} to define block
+       -Hashicorp Language--> HCL
+       -  .tf, .if.json
+
+-Block type:
+1. Provider--> AWS, GCP, AZure
+2. Resources
+3. Data
+4. variable
+5. Output
+6. Module
+
+Terraform:
+---> terraform is a TaC tool that allows you to create and manage infra using code.
+--> terraform was created by HashoCorp
+--> terraform wad first released in July 2014.
+
+Terraform block type:
+
+1. terraform:
+--> used to configure terraform itself such as required provider and terraform version.
+
+2. provider:
+---> defines which cloud or platform terraform will connnect to
+-->it connect terraform to cloud provider(AWS,GCP,Azure)
+-->set region and authentication details
+
+3. resource:
+-->create and manage infra resources.
+
+4. data:
+-->read existing infra onfo without creating anything.
+
+5. variable:
+--> defines input variable 
+--> make code reusable
+--> avoid hardcodeing values
+
+6. output:
+--> display values after deployment
+--> show IP address/URL/DNS name
+
+*Terraform Lifecycle:
+1. terraform init:
+--It will intializes the terraform project.
+-it downloads required provides AWS,GCP, Azure
+-creates the .terraform folder
+-prepare terraform to work with your configuration files.
+
+2. terraform plan
+--shows what terraform is going to create
+-reads your .tf files
+-shows resources to be create, modified and distroyed.
+symbols         meaning
+   +            create
+   -            remove
+   ~            modify resources 
+
+3. terraform apply
+--actually creates or modify infrastrucure
+
+4. terraform destroy
+--used to delete all the infrastrucure resources.
+
+how it works?
+1. first terraform reads the terraform state file(terraform.tfstate)
+2. It checks which resources are currently managed by terraform
+3. It creates a destroy plan shoeing what will be deleyed.
+4. it ask for confirmation
+3. after you type yes, it deletes the resiurces.

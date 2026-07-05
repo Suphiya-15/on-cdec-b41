@@ -1,0 +1,42 @@
+
+
+                                **terraform commands:
+
+1. terraform taint :
+--> it will forcefully recreate new resource. 
+syntax:   terraform  apply -replace="instance_type.instance_name"
+eg:  terraform apply -replace="aws_instance.ec2"
+
+2. terraform refresh:
+-->terraform stores your infra information in a state file. if someone changed infra manually using console.
+then use terraform refresh command to update state file. it does not change your infra it only update file.
+syntax:  terraform apply -refresh-only
+
+3. terraform import:
+-->import is used when a resource already exist in AWS but was not created by terraform. now you want terraform to manage it.action 
+--> it does not create .tf code automatically. it only adds information to state file.
+
+4. terraform destroy -t:  (--target)
+--> it will destroy only specific resource.
+syntax: terraform destroy -target=<resource_type>.<resource_name>
+eg: terraform destroy -target=aws_security_group.my-sg
+
+                        
+                                ** Provisioner block**
+
+-in terraform provisioners are used to run scripts or commands after a resource is created.
+-types of provisioners:
+1. local-exec :
+-runs command on the machine where terraform is running.
+
+2. remote-exec :
+-runs commands inside the created server. (ec2-insatnce)
+
+3. file :
+-copies files from your machine to the server. (ec2-instance)
+
+web.sh ----> apache2
+web.sh (local-machine) --------> ec2 instance --> file
+                                 bash web.sh
+---------------------------------> remote-exec
+

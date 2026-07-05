@@ -1,0 +1,7 @@
+
+vpc_cidr = "10.0.0.0/16"
+pri = "10.0.0.0/24"
+pub = "10.0.1.0/24"
+image_id = "ami-07a00cf47dbbc844c"
+project = "cbz"
+instance_type = "t3.micro"
