@@ -18,8 +18,8 @@ pipeline {
                 input message 'Approval is required. shall we proceed??', ok:"Approve"
             }
         }
-        stage('APPLAY'){
-            steps{
+        stage('APPLAY') {
+            steps {
                sh '''cd Terraform/day-10
                 terraform apply --auto-approve''' 
             }
