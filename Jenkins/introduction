@@ -60,3 +60,17 @@ syntax start with node keyword              syntax start with pipeline keyword
 .groovy                                              .jdp
 
 pipeline stage view plugin  and pipeline plugin
+
+webhook:
+sonarqube ---> Jenkins
+
+steps configure webhook:
+1. go tom sonarqube
+2. administration
+3. configuration
+4. webhooks
+5. create webhook:
+i] name = studentapp
+ii] url = http://jenkins-server-ip-address:8080/sonarqube-webhook
+iii] secret = empty
+

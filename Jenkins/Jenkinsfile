@@ -17,9 +17,22 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing done..'
+                withSonarQubeEnv('sonarqube') {  
+                    sh '''
+                    cd backend
+                    mvn clean package -DskipTests sonar:sonar   -Dsonar.projectKey=studentapp   -Dsonar.projectName=\'studentapp\'
+                    '''
+       }
+              }
+        }
+        stage('Quality-gate'){
+            steps{
+                timeout(10) {
+    waitForQualityGate abortPipeline: true, credentialsId: 'sonar-cred'
             }
         }
+        }
+       
         stage('Deploy') {
             steps {
                 echo 'Deploying done....'
