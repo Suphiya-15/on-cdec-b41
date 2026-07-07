@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages{
-        stage('PULL') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Suphiya-15/on-cdec-b41.git'
-            }
-        }
+//        stage('PULL') {
+ //           steps {
+  //              git branch: 'main', url: 'https://github.com/Suphiya-15/on-cdec-b41.git'
+   //         }
+   //     }
         stage('PLAN') {
             steps{
                 sh '''cd Terraform/day-10
