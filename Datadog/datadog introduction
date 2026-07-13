@@ -1,0 +1,18 @@
+
+                 **Datadog**
+-Monitoring tool
+
+1. metric collector : collects numbers about your server
+eg: CPU, memory, disk usage, network
+
+2. log collector: collects logs files
+
+3. dashboard = shows collected data in graphs and charts
+
+cloudwatch
+datadog
+grafana
+
+
+suphiya.demo@gmail.com
+

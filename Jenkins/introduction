@@ -74,3 +74,15 @@ i] name = studentapp
 ii] url = http://jenkins-server-ip-address:8080/sonarqube-webhook
 iii] secret = empty
 
+jenkins server:
+1. install terraform
+2. install Docker
+3. install kubectl
+4. increase volume size to 30gb
+
+project:
+1. infra pipeline ---> create EKS cluster
+2. application pipeline --> frontend, backend
+
+docker images --> frontend/backend ----> using docker file
+

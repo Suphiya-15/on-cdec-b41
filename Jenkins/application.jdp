@@ -1,0 +1,33 @@
+
+pipeline {
+    agent any 
+    stages{
+        stage('FRONTEND-DOCKER-BUILD') {
+            steps {
+                
+            }
+        }
+        stage('BACKEND-DOCKER-BUILD') {
+            steps {
+                
+            }
+        }
+        stage('DOCKER-PUSH') {
+            steps {
+                
+            }
+        }
+         stage('DOCKER-CLEAN') {
+            steps {
+                
+            }
+        }
+        
+        stage('DEPLOY') {
+            steps {
+                
+            }
+        }
+
+    }
+}
