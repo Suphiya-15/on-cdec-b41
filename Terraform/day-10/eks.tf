@@ -110,7 +110,7 @@ resource "aws_eks_node_group" "node_group" {
 
   subnet_ids = data.aws_subnets.my_subnet.ids
 
-  instance_types = ["t3.micro"]
+  instance_types = ["c7i-flex.large"]
   disk_size      = 20
 
   scaling_config {
